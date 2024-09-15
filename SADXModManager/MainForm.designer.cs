@@ -59,7 +59,7 @@
             this.saveButton = new System.Windows.Forms.Button();
             this.saveAndPlayButton = new System.Windows.Forms.Button();
             this.installButton = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlMain = new System.Windows.Forms.TabControl();
             this.tabPageMods = new System.Windows.Forms.TabPage();
             this.configureModButton = new System.Windows.Forms.Button();
             this.modBottomButton = new System.Windows.Forms.Button();
@@ -69,6 +69,8 @@
             this.modUpButton = new System.Windows.Forms.Button();
             this.tabPageCodes = new System.Windows.Forms.TabPage();
             this.codesCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.tabPageGameConfig = new System.Windows.Forms.TabPage();
+            this.tabControlGameConfig = new System.Windows.Forms.TabControl();
             this.tabPageGraphics = new System.Windows.Forms.TabPage();
             this.groupBox_WindowMode = new System.Windows.Forms.GroupBox();
             this.checkWindowResize = new System.Windows.Forms.CheckBox();
@@ -98,6 +100,9 @@
             this.checkVsync = new System.Windows.Forms.CheckBox();
             this.radioFullscreen = new System.Windows.Forms.RadioButton();
             this.tabPageInput = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonDInput = new System.Windows.Forms.RadioButton();
             this.groupMouseMode = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
             this.comboMouseButtons = new System.Windows.Forms.ComboBox();
@@ -105,6 +110,7 @@
             this.radioMouseModeHold = new System.Windows.Forms.RadioButton();
             this.comboMouseActions = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
+            this.tabPageController = new System.Windows.Forms.TabPage();
             this.groupBoxController = new System.Windows.Forms.GroupBox();
             this.controllerConfigName = new System.Windows.Forms.TextBox();
             this.controllerConfigSelect = new System.Windows.Forms.ComboBox();
@@ -127,19 +133,8 @@
             this.checkMusic = new System.Windows.Forms.CheckBox();
             this.checkSound = new System.Windows.Forms.CheckBox();
             this.check3DSound = new System.Windows.Forms.CheckBox();
+            this.tabPagePatches = new System.Windows.Forms.TabPage();
             this.tabPageOptions = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.buttonSaveProfile = new System.Windows.Forms.Button();
-            this.buttonLoadProfile = new System.Windows.Forms.Button();
-            this.profileNameBox = new System.Windows.Forms.ComboBox();
-            this.installURLHandlerButton = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.buttonCheckForUpdates = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkUpdateModsStartup = new System.Windows.Forms.CheckBox();
-            this.numericUpdateFrequency = new System.Windows.Forms.NumericUpDown();
-            this.comboUpdateFrequency = new System.Windows.Forms.ComboBox();
-            this.checkUpdateStartup = new System.Windows.Forms.CheckBox();
             this.tabPageDebug = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkInterpolation = new System.Windows.Forms.CheckBox();
@@ -177,6 +172,19 @@
             this.numericUpDownTestSpawnY = new System.Windows.Forms.NumericUpDown();
             this.comboBoxTestSpawnLevel = new System.Windows.Forms.ComboBox();
             this.numericUpDownTestSpawnX = new System.Windows.Forms.NumericUpDown();
+            this.tabPageManagerConfig = new System.Windows.Forms.TabPage();
+            this.groupBoxProfiles = new System.Windows.Forms.GroupBox();
+            this.buttonSaveProfile = new System.Windows.Forms.Button();
+            this.buttonLoadProfile = new System.Windows.Forms.Button();
+            this.profileNameBox = new System.Windows.Forms.ComboBox();
+            this.buttonInstallURLHandler = new System.Windows.Forms.Button();
+            this.groupBoxUpdates = new System.Windows.Forms.GroupBox();
+            this.buttonCheckForUpdates = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.checkUpdateModsStartup = new System.Windows.Forms.CheckBox();
+            this.numericUpdateFrequency = new System.Windows.Forms.NumericUpDown();
+            this.comboUpdateFrequency = new System.Windows.Forms.ComboBox();
+            this.checkUpdateStartup = new System.Windows.Forms.CheckBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.modContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.openFolderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -188,6 +196,7 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.developerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generateManifestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listBoxPatches = new System.Windows.Forms.CheckedListBox();
             label3 = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
@@ -198,9 +207,11 @@
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verticalResolution)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalResolution)).BeginInit();
-            this.tabControl1.SuspendLayout();
+            this.tabControlMain.SuspendLayout();
             this.tabPageMods.SuspendLayout();
             this.tabPageCodes.SuspendLayout();
+            this.tabPageGameConfig.SuspendLayout();
+            this.tabControlGameConfig.SuspendLayout();
             this.tabPageGraphics.SuspendLayout();
             this.groupBox_WindowMode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.windowHeight)).BeginInit();
@@ -208,7 +219,9 @@
             this.groupBox_Visuals.SuspendLayout();
             this.groupBox_Display.SuspendLayout();
             this.tabPageInput.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupMouseMode.SuspendLayout();
+            this.tabPageController.SuspendLayout();
             this.groupBoxController.SuspendLayout();
             this.tabPageSound.SuspendLayout();
             this.groupBox_SoundVolume.SuspendLayout();
@@ -216,10 +229,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarVoiceVol)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMusicVol)).BeginInit();
             this.groupBox_SoundConfig.SuspendLayout();
+            this.tabPagePatches.SuspendLayout();
             this.tabPageOptions.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
             this.tabPageDebug.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -230,6 +241,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTestSpawnZ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTestSpawnY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTestSpawnX)).BeginInit();
+            this.tabPageManagerConfig.SuspendLayout();
+            this.groupBoxProfiles.SuspendLayout();
+            this.groupBoxUpdates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).BeginInit();
             this.modContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -272,7 +287,7 @@
             groupBox2.Controls.Add(this.disableCDCheckCheckBox);
             groupBox2.Location = new System.Drawing.Point(6, 6);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new System.Drawing.Size(440, 88);
+            groupBox2.Size = new System.Drawing.Size(426, 88);
             groupBox2.TabIndex = 0;
             groupBox2.TabStop = false;
             groupBox2.Text = "Misc.";
@@ -388,7 +403,7 @@
             "All Screens"});
             this.screenNumComboBox.Location = new System.Drawing.Point(56, 19);
             this.screenNumComboBox.Name = "screenNumComboBox";
-            this.screenNumComboBox.Size = new System.Drawing.Size(365, 21);
+            this.screenNumComboBox.Size = new System.Drawing.Size(351, 21);
             this.screenNumComboBox.TabIndex = 1;
             this.toolTip.SetToolTip(this.screenNumComboBox, "The screen to put the game on.");
             this.screenNumComboBox.SelectedIndexChanged += new System.EventHandler(this.screenNumComboBox_SelectedIndexChanged);
@@ -585,24 +600,22 @@
             this.installButton.UseVisualStyleBackColor = true;
             this.installButton.Click += new System.EventHandler(this.installButton_Click);
             // 
-            // tabControl1
+            // tabControlMain
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tabPageMods);
-            this.tabControl1.Controls.Add(this.tabPageCodes);
-            this.tabControl1.Controls.Add(this.tabPageGraphics);
-            this.tabControl1.Controls.Add(this.tabPageInput);
-            this.tabControl1.Controls.Add(this.tabPageSound);
-            this.tabControl1.Controls.Add(this.tabPageOptions);
-            this.tabControl1.Controls.Add(this.tabPageDebug);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(460, 447);
-            this.tabControl1.TabIndex = 0;
+            this.tabControlMain.Controls.Add(this.tabPageMods);
+            this.tabControlMain.Controls.Add(this.tabPageCodes);
+            this.tabControlMain.Controls.Add(this.tabPageGameConfig);
+            this.tabControlMain.Controls.Add(this.tabPageDebug);
+            this.tabControlMain.Controls.Add(this.tabPageManagerConfig);
+            this.tabControlMain.Location = new System.Drawing.Point(0, 0);
+            this.tabControlMain.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
+            this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.SelectedIndex = 0;
+            this.tabControlMain.Size = new System.Drawing.Size(460, 447);
+            this.tabControlMain.TabIndex = 0;
             // 
             // tabPageMods
             // 
@@ -724,6 +737,32 @@
             this.codesCheckedListBox.TabIndex = 0;
             this.codesCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.codesCheckedListBox_ItemCheck);
             // 
+            // tabPageGameConfig
+            // 
+            this.tabPageGameConfig.Controls.Add(this.tabControlGameConfig);
+            this.tabPageGameConfig.Location = new System.Drawing.Point(4, 22);
+            this.tabPageGameConfig.Name = "tabPageGameConfig";
+            this.tabPageGameConfig.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageGameConfig.Size = new System.Drawing.Size(452, 421);
+            this.tabPageGameConfig.TabIndex = 7;
+            this.tabPageGameConfig.Text = "Game Config";
+            this.tabPageGameConfig.UseVisualStyleBackColor = true;
+            // 
+            // tabControlGameConfig
+            // 
+            this.tabControlGameConfig.Controls.Add(this.tabPageGraphics);
+            this.tabControlGameConfig.Controls.Add(this.tabPageInput);
+            this.tabControlGameConfig.Controls.Add(this.tabPageController);
+            this.tabControlGameConfig.Controls.Add(this.tabPageSound);
+            this.tabControlGameConfig.Controls.Add(this.tabPagePatches);
+            this.tabControlGameConfig.Controls.Add(this.tabPageOptions);
+            this.tabControlGameConfig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlGameConfig.Location = new System.Drawing.Point(3, 3);
+            this.tabControlGameConfig.Name = "tabControlGameConfig";
+            this.tabControlGameConfig.SelectedIndex = 0;
+            this.tabControlGameConfig.Size = new System.Drawing.Size(446, 415);
+            this.tabControlGameConfig.TabIndex = 0;
+            // 
             // tabPageGraphics
             // 
             this.tabPageGraphics.AutoScroll = true;
@@ -734,7 +773,7 @@
             this.tabPageGraphics.Location = new System.Drawing.Point(4, 22);
             this.tabPageGraphics.Name = "tabPageGraphics";
             this.tabPageGraphics.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGraphics.Size = new System.Drawing.Size(452, 421);
+            this.tabPageGraphics.Size = new System.Drawing.Size(438, 389);
             this.tabPageGraphics.TabIndex = 2;
             this.tabPageGraphics.Text = "Graphics";
             // 
@@ -750,7 +789,7 @@
             this.groupBox_WindowMode.Controls.Add(label2);
             this.groupBox_WindowMode.Location = new System.Drawing.Point(6, 133);
             this.groupBox_WindowMode.Name = "groupBox_WindowMode";
-            this.groupBox_WindowMode.Size = new System.Drawing.Size(440, 75);
+            this.groupBox_WindowMode.Size = new System.Drawing.Size(426, 75);
             this.groupBox_WindowMode.TabIndex = 1;
             this.groupBox_WindowMode.TabStop = false;
             this.groupBox_WindowMode.Text = "Window mode";
@@ -859,7 +898,7 @@
             this.groupBox_Visuals.Controls.Add(this.forceTextureFilterCheckBox);
             this.groupBox_Visuals.Location = new System.Drawing.Point(6, 214);
             this.groupBox_Visuals.Name = "groupBox_Visuals";
-            this.groupBox_Visuals.Size = new System.Drawing.Size(440, 164);
+            this.groupBox_Visuals.Size = new System.Drawing.Size(426, 164);
             this.groupBox_Visuals.TabIndex = 2;
             this.groupBox_Visuals.TabStop = false;
             this.groupBox_Visuals.Text = "Visuals";
@@ -1064,7 +1103,7 @@
             this.groupBox_Display.Controls.Add(this.verticalResolution);
             this.groupBox_Display.Location = new System.Drawing.Point(6, 6);
             this.groupBox_Display.Name = "groupBox_Display";
-            this.groupBox_Display.Size = new System.Drawing.Size(440, 121);
+            this.groupBox_Display.Size = new System.Drawing.Size(426, 121);
             this.groupBox_Display.TabIndex = 0;
             this.groupBox_Display.TabStop = false;
             this.groupBox_Display.Text = "Display";
@@ -1132,15 +1171,47 @@
             // 
             // tabPageInput
             // 
-            this.tabPageInput.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPageInput.Controls.Add(this.groupBox3);
             this.tabPageInput.Controls.Add(this.groupMouseMode);
-            this.tabPageInput.Controls.Add(this.groupBoxController);
             this.tabPageInput.Location = new System.Drawing.Point(4, 22);
             this.tabPageInput.Name = "tabPageInput";
-            this.tabPageInput.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageInput.Size = new System.Drawing.Size(452, 421);
-            this.tabPageInput.TabIndex = 6;
+            this.tabPageInput.Size = new System.Drawing.Size(438, 389);
+            this.tabPageInput.TabIndex = 8;
             this.tabPageInput.Text = "Input";
+            this.tabPageInput.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.radioButton1);
+            this.groupBox3.Controls.Add(this.radioButtonDInput);
+            this.groupBox3.Location = new System.Drawing.Point(4, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(431, 53);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Input Mode";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(129, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(46, 17);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.Text = "SDL";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonDInput
+            // 
+            this.radioButtonDInput.AutoSize = true;
+            this.radioButtonDInput.Checked = true;
+            this.radioButtonDInput.Location = new System.Drawing.Point(6, 19);
+            this.radioButtonDInput.Name = "radioButtonDInput";
+            this.radioButtonDInput.Size = new System.Drawing.Size(117, 17);
+            this.radioButtonDInput.TabIndex = 0;
+            this.radioButtonDInput.TabStop = true;
+            this.radioButtonDInput.Text = "DirectInput (Vanilla)";
+            this.radioButtonDInput.UseVisualStyleBackColor = true;
             // 
             // groupMouseMode
             // 
@@ -1152,9 +1223,9 @@
             this.groupMouseMode.Controls.Add(this.radioMouseModeHold);
             this.groupMouseMode.Controls.Add(this.comboMouseActions);
             this.groupMouseMode.Controls.Add(this.label18);
-            this.groupMouseMode.Location = new System.Drawing.Point(6, 6);
+            this.groupMouseMode.Location = new System.Drawing.Point(4, 63);
             this.groupMouseMode.Name = "groupMouseMode";
-            this.groupMouseMode.Size = new System.Drawing.Size(440, 68);
+            this.groupMouseMode.Size = new System.Drawing.Size(431, 68);
             this.groupMouseMode.TabIndex = 0;
             this.groupMouseMode.TabStop = false;
             this.groupMouseMode.Text = "Mouse";
@@ -1237,6 +1308,17 @@
             this.label18.TabIndex = 0;
             this.label18.Text = "Action:";
             // 
+            // tabPageController
+            // 
+            this.tabPageController.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.tabPageController.Controls.Add(this.groupBoxController);
+            this.tabPageController.Location = new System.Drawing.Point(4, 22);
+            this.tabPageController.Name = "tabPageController";
+            this.tabPageController.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageController.Size = new System.Drawing.Size(438, 389);
+            this.tabPageController.TabIndex = 6;
+            this.tabPageController.Text = "Controller";
+            // 
             // groupBoxController
             // 
             this.groupBoxController.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1248,9 +1330,9 @@
             this.groupBoxController.Controls.Add(this.controllerConfigAdd);
             this.groupBoxController.Controls.Add(this.tableLayoutPanel1);
             this.groupBoxController.Controls.Add(this.controllerConfigRemove);
-            this.groupBoxController.Location = new System.Drawing.Point(6, 80);
+            this.groupBoxController.Location = new System.Drawing.Point(6, 6);
             this.groupBoxController.Name = "groupBoxController";
-            this.groupBoxController.Size = new System.Drawing.Size(440, 293);
+            this.groupBoxController.Size = new System.Drawing.Size(426, 377);
             this.groupBoxController.TabIndex = 1;
             this.groupBoxController.TabStop = false;
             this.groupBoxController.Text = "Controller (DirectInput)";
@@ -1325,7 +1407,7 @@
             this.tabPageSound.Location = new System.Drawing.Point(4, 22);
             this.tabPageSound.Name = "tabPageSound";
             this.tabPageSound.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageSound.Size = new System.Drawing.Size(452, 421);
+            this.tabPageSound.Size = new System.Drawing.Size(438, 389);
             this.tabPageSound.TabIndex = 4;
             this.tabPageSound.Text = "Sound";
             // 
@@ -1344,7 +1426,7 @@
             this.groupBox_SoundVolume.Controls.Add(this.label14);
             this.groupBox_SoundVolume.Location = new System.Drawing.Point(6, 77);
             this.groupBox_SoundVolume.Name = "groupBox_SoundVolume";
-            this.groupBox_SoundVolume.Size = new System.Drawing.Size(440, 171);
+            this.groupBox_SoundVolume.Size = new System.Drawing.Size(426, 171);
             this.groupBox_SoundVolume.TabIndex = 3;
             this.groupBox_SoundVolume.TabStop = false;
             this.groupBox_SoundVolume.Text = "Volume";
@@ -1354,7 +1436,7 @@
             this.labelSEVol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSEVol.AutoSize = true;
             this.labelSEVol.Enabled = false;
-            this.labelSEVol.Location = new System.Drawing.Point(407, 116);
+            this.labelSEVol.Location = new System.Drawing.Point(393, 116);
             this.labelSEVol.Name = "labelSEVol";
             this.labelSEVol.Size = new System.Drawing.Size(25, 13);
             this.labelSEVol.TabIndex = 10;
@@ -1370,7 +1452,7 @@
             this.trackBarSEVol.Margin = new System.Windows.Forms.Padding(0);
             this.trackBarSEVol.Maximum = 100;
             this.trackBarSEVol.Name = "trackBarSEVol";
-            this.trackBarSEVol.Size = new System.Drawing.Size(317, 45);
+            this.trackBarSEVol.Size = new System.Drawing.Size(303, 45);
             this.trackBarSEVol.TabIndex = 2;
             this.trackBarSEVol.TickFrequency = 10;
             this.trackBarSEVol.Value = 100;
@@ -1390,7 +1472,7 @@
             // 
             this.labelVoiceVol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelVoiceVol.AutoSize = true;
-            this.labelVoiceVol.Location = new System.Drawing.Point(407, 70);
+            this.labelVoiceVol.Location = new System.Drawing.Point(393, 70);
             this.labelVoiceVol.Name = "labelVoiceVol";
             this.labelVoiceVol.Size = new System.Drawing.Size(25, 13);
             this.labelVoiceVol.TabIndex = 7;
@@ -1400,7 +1482,7 @@
             // 
             this.labelMusicVol.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMusicVol.AutoSize = true;
-            this.labelMusicVol.Location = new System.Drawing.Point(407, 24);
+            this.labelMusicVol.Location = new System.Drawing.Point(393, 24);
             this.labelMusicVol.Name = "labelMusicVol";
             this.labelMusicVol.Size = new System.Drawing.Size(25, 13);
             this.labelMusicVol.TabIndex = 6;
@@ -1415,7 +1497,7 @@
             this.trackBarVoiceVol.Margin = new System.Windows.Forms.Padding(0);
             this.trackBarVoiceVol.Maximum = 100;
             this.trackBarVoiceVol.Name = "trackBarVoiceVol";
-            this.trackBarVoiceVol.Size = new System.Drawing.Size(317, 45);
+            this.trackBarVoiceVol.Size = new System.Drawing.Size(303, 45);
             this.trackBarVoiceVol.TabIndex = 1;
             this.trackBarVoiceVol.TickFrequency = 10;
             this.trackBarVoiceVol.Value = 100;
@@ -1440,7 +1522,7 @@
             this.trackBarMusicVol.Margin = new System.Windows.Forms.Padding(0);
             this.trackBarMusicVol.Maximum = 100;
             this.trackBarMusicVol.Name = "trackBarMusicVol";
-            this.trackBarMusicVol.Size = new System.Drawing.Size(317, 45);
+            this.trackBarMusicVol.Size = new System.Drawing.Size(303, 45);
             this.trackBarMusicVol.TabIndex = 0;
             this.trackBarMusicVol.TickFrequency = 10;
             this.trackBarMusicVol.Value = 100;
@@ -1465,7 +1547,7 @@
             this.groupBox_SoundConfig.Controls.Add(this.check3DSound);
             this.groupBox_SoundConfig.Location = new System.Drawing.Point(6, 6);
             this.groupBox_SoundConfig.Name = "groupBox_SoundConfig";
-            this.groupBox_SoundConfig.Size = new System.Drawing.Size(440, 65);
+            this.groupBox_SoundConfig.Size = new System.Drawing.Size(426, 65);
             this.groupBox_SoundConfig.TabIndex = 2;
             this.groupBox_SoundConfig.TabStop = false;
             this.groupBox_SoundConfig.Text = "Sound";
@@ -1518,179 +1600,27 @@
             this.toolTip.SetToolTip(this.check3DSound, "Enable or disable surround sound.");
             this.check3DSound.UseVisualStyleBackColor = true;
             // 
+            // tabPagePatches
+            // 
+            this.tabPagePatches.Controls.Add(this.listBoxPatches);
+            this.tabPagePatches.Location = new System.Drawing.Point(4, 22);
+            this.tabPagePatches.Name = "tabPagePatches";
+            this.tabPagePatches.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPagePatches.Size = new System.Drawing.Size(438, 389);
+            this.tabPagePatches.TabIndex = 7;
+            this.tabPagePatches.Text = "Patches";
+            this.tabPagePatches.UseVisualStyleBackColor = true;
+            // 
             // tabPageOptions
             // 
             this.tabPageOptions.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tabPageOptions.Controls.Add(this.groupBox3);
-            this.tabPageOptions.Controls.Add(this.installURLHandlerButton);
-            this.tabPageOptions.Controls.Add(this.groupBox4);
             this.tabPageOptions.Controls.Add(groupBox2);
             this.tabPageOptions.Location = new System.Drawing.Point(4, 22);
             this.tabPageOptions.Name = "tabPageOptions";
             this.tabPageOptions.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageOptions.Size = new System.Drawing.Size(452, 421);
+            this.tabPageOptions.Size = new System.Drawing.Size(438, 389);
             this.tabPageOptions.TabIndex = 3;
             this.tabPageOptions.Text = "Options";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.buttonSaveProfile);
-            this.groupBox3.Controls.Add(this.buttonLoadProfile);
-            this.groupBox3.Controls.Add(this.profileNameBox);
-            this.groupBox3.Location = new System.Drawing.Point(6, 196);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(440, 58);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Profiles";
-            // 
-            // buttonSaveProfile
-            // 
-            this.buttonSaveProfile.Enabled = false;
-            this.buttonSaveProfile.Location = new System.Drawing.Point(266, 19);
-            this.buttonSaveProfile.Name = "buttonSaveProfile";
-            this.buttonSaveProfile.Size = new System.Drawing.Size(75, 23);
-            this.buttonSaveProfile.TabIndex = 2;
-            this.buttonSaveProfile.Text = "Save";
-            this.toolTip.SetToolTip(this.buttonSaveProfile, "Saves all current settings to the profile with the selected name.");
-            this.buttonSaveProfile.UseVisualStyleBackColor = true;
-            this.buttonSaveProfile.Click += new System.EventHandler(this.buttonSaveProfile_Click);
-            // 
-            // buttonLoadProfile
-            // 
-            this.buttonLoadProfile.Enabled = false;
-            this.buttonLoadProfile.Location = new System.Drawing.Point(185, 19);
-            this.buttonLoadProfile.Name = "buttonLoadProfile";
-            this.buttonLoadProfile.Size = new System.Drawing.Size(75, 23);
-            this.buttonLoadProfile.TabIndex = 1;
-            this.buttonLoadProfile.Text = "Load";
-            this.toolTip.SetToolTip(this.buttonLoadProfile, "Loads the profile with the selected name.");
-            this.buttonLoadProfile.UseVisualStyleBackColor = true;
-            this.buttonLoadProfile.Click += new System.EventHandler(this.buttonLoadProfile_Click);
-            // 
-            // profileNameBox
-            // 
-            this.profileNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.profileNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.profileNameBox.FormattingEnabled = true;
-            this.profileNameBox.Location = new System.Drawing.Point(6, 21);
-            this.profileNameBox.Name = "profileNameBox";
-            this.profileNameBox.Size = new System.Drawing.Size(169, 21);
-            this.profileNameBox.TabIndex = 0;
-            this.toolTip.SetToolTip(this.profileNameBox, "Type in or select the name of a profile to load/save.");
-            this.profileNameBox.TextChanged += new System.EventHandler(this.profileNameBox_TextChanged);
-            // 
-            // installURLHandlerButton
-            // 
-            this.installURLHandlerButton.AutoSize = true;
-            this.installURLHandlerButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.installURLHandlerButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.installURLHandlerButton.Location = new System.Drawing.Point(6, 260);
-            this.installURLHandlerButton.Name = "installURLHandlerButton";
-            this.installURLHandlerButton.Size = new System.Drawing.Size(119, 22);
-            this.installURLHandlerButton.TabIndex = 3;
-            this.installURLHandlerButton.Text = "Enable 1-Click Install";
-            this.installURLHandlerButton.UseVisualStyleBackColor = true;
-            this.installURLHandlerButton.Click += new System.EventHandler(this.installURLHandlerButton_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox4.Controls.Add(this.buttonCheckForUpdates);
-            this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Controls.Add(this.checkUpdateModsStartup);
-            this.groupBox4.Controls.Add(this.numericUpdateFrequency);
-            this.groupBox4.Controls.Add(this.comboUpdateFrequency);
-            this.groupBox4.Controls.Add(this.checkUpdateStartup);
-            this.groupBox4.Location = new System.Drawing.Point(6, 100);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(440, 90);
-            this.groupBox4.TabIndex = 1;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Updates";
-            // 
-            // buttonCheckForUpdates
-            // 
-            this.buttonCheckForUpdates.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.buttonCheckForUpdates.Location = new System.Drawing.Point(259, 55);
-            this.buttonCheckForUpdates.Name = "buttonCheckForUpdates";
-            this.buttonCheckForUpdates.Size = new System.Drawing.Size(75, 23);
-            this.buttonCheckForUpdates.TabIndex = 8;
-            this.buttonCheckForUpdates.Text = "Check Now";
-            this.buttonCheckForUpdates.UseVisualStyleBackColor = true;
-            this.buttonCheckForUpdates.Click += new System.EventHandler(this.buttonCheckForUpdates_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Frequency:";
-            // 
-            // checkUpdateModsStartup
-            // 
-            this.checkUpdateModsStartup.AutoSize = true;
-            this.checkUpdateModsStartup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkUpdateModsStartup.Location = new System.Drawing.Point(133, 19);
-            this.checkUpdateModsStartup.Name = "checkUpdateModsStartup";
-            this.checkUpdateModsStartup.Size = new System.Drawing.Size(141, 18);
-            this.checkUpdateModsStartup.TabIndex = 5;
-            this.checkUpdateModsStartup.Text = "Check mods on startup";
-            this.checkUpdateModsStartup.UseVisualStyleBackColor = true;
-            // 
-            // numericUpdateFrequency
-            // 
-            this.numericUpdateFrequency.Location = new System.Drawing.Point(133, 57);
-            this.numericUpdateFrequency.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpdateFrequency.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpdateFrequency.Name = "numericUpdateFrequency";
-            this.numericUpdateFrequency.Size = new System.Drawing.Size(120, 20);
-            this.numericUpdateFrequency.TabIndex = 7;
-            this.numericUpdateFrequency.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // comboUpdateFrequency
-            // 
-            this.comboUpdateFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboUpdateFrequency.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboUpdateFrequency.FormattingEnabled = true;
-            this.comboUpdateFrequency.Items.AddRange(new object[] {
-            "Always",
-            "Days",
-            "Hours",
-            "Weeks"});
-            this.comboUpdateFrequency.Location = new System.Drawing.Point(6, 56);
-            this.comboUpdateFrequency.Name = "comboUpdateFrequency";
-            this.comboUpdateFrequency.Size = new System.Drawing.Size(121, 21);
-            this.comboUpdateFrequency.TabIndex = 6;
-            this.comboUpdateFrequency.SelectedIndexChanged += new System.EventHandler(this.comboUpdateFrequency_SelectedIndexChanged);
-            // 
-            // checkUpdateStartup
-            // 
-            this.checkUpdateStartup.AutoSize = true;
-            this.checkUpdateStartup.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.checkUpdateStartup.Location = new System.Drawing.Point(6, 19);
-            this.checkUpdateStartup.Name = "checkUpdateStartup";
-            this.checkUpdateStartup.Size = new System.Drawing.Size(113, 18);
-            this.checkUpdateStartup.TabIndex = 4;
-            this.checkUpdateStartup.Text = "Check on startup";
-            this.checkUpdateStartup.UseVisualStyleBackColor = true;
             // 
             // tabPageDebug
             // 
@@ -2286,6 +2216,179 @@
             this.numericUpDownTestSpawnX.TabIndex = 11;
             this.toolTip.SetToolTip(this.numericUpDownTestSpawnX, "Character X Position.");
             // 
+            // tabPageManagerConfig
+            // 
+            this.tabPageManagerConfig.Controls.Add(this.groupBoxProfiles);
+            this.tabPageManagerConfig.Controls.Add(this.buttonInstallURLHandler);
+            this.tabPageManagerConfig.Controls.Add(this.groupBoxUpdates);
+            this.tabPageManagerConfig.Location = new System.Drawing.Point(4, 22);
+            this.tabPageManagerConfig.Name = "tabPageManagerConfig";
+            this.tabPageManagerConfig.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageManagerConfig.Size = new System.Drawing.Size(452, 421);
+            this.tabPageManagerConfig.TabIndex = 8;
+            this.tabPageManagerConfig.Text = "Manager Config";
+            this.tabPageManagerConfig.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxProfiles
+            // 
+            this.groupBoxProfiles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxProfiles.Controls.Add(this.buttonSaveProfile);
+            this.groupBoxProfiles.Controls.Add(this.buttonLoadProfile);
+            this.groupBoxProfiles.Controls.Add(this.profileNameBox);
+            this.groupBoxProfiles.Location = new System.Drawing.Point(9, 102);
+            this.groupBoxProfiles.Name = "groupBoxProfiles";
+            this.groupBoxProfiles.Size = new System.Drawing.Size(437, 58);
+            this.groupBoxProfiles.TabIndex = 2;
+            this.groupBoxProfiles.TabStop = false;
+            this.groupBoxProfiles.Text = "Profiles";
+            // 
+            // buttonSaveProfile
+            // 
+            this.buttonSaveProfile.Enabled = false;
+            this.buttonSaveProfile.Location = new System.Drawing.Point(266, 19);
+            this.buttonSaveProfile.Name = "buttonSaveProfile";
+            this.buttonSaveProfile.Size = new System.Drawing.Size(75, 23);
+            this.buttonSaveProfile.TabIndex = 2;
+            this.buttonSaveProfile.Text = "Save";
+            this.toolTip.SetToolTip(this.buttonSaveProfile, "Saves all current settings to the profile with the selected name.");
+            this.buttonSaveProfile.UseVisualStyleBackColor = true;
+            this.buttonSaveProfile.Click += new System.EventHandler(this.buttonSaveProfile_Click);
+            // 
+            // buttonLoadProfile
+            // 
+            this.buttonLoadProfile.Enabled = false;
+            this.buttonLoadProfile.Location = new System.Drawing.Point(185, 19);
+            this.buttonLoadProfile.Name = "buttonLoadProfile";
+            this.buttonLoadProfile.Size = new System.Drawing.Size(75, 23);
+            this.buttonLoadProfile.TabIndex = 1;
+            this.buttonLoadProfile.Text = "Load";
+            this.toolTip.SetToolTip(this.buttonLoadProfile, "Loads the profile with the selected name.");
+            this.buttonLoadProfile.UseVisualStyleBackColor = true;
+            this.buttonLoadProfile.Click += new System.EventHandler(this.buttonLoadProfile_Click);
+            // 
+            // profileNameBox
+            // 
+            this.profileNameBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.profileNameBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.profileNameBox.FormattingEnabled = true;
+            this.profileNameBox.Location = new System.Drawing.Point(6, 21);
+            this.profileNameBox.Name = "profileNameBox";
+            this.profileNameBox.Size = new System.Drawing.Size(169, 21);
+            this.profileNameBox.TabIndex = 0;
+            this.toolTip.SetToolTip(this.profileNameBox, "Type in or select the name of a profile to load/save.");
+            this.profileNameBox.TextChanged += new System.EventHandler(this.profileNameBox_TextChanged);
+            // 
+            // buttonInstallURLHandler
+            // 
+            this.buttonInstallURLHandler.AutoSize = true;
+            this.buttonInstallURLHandler.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.buttonInstallURLHandler.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonInstallURLHandler.Location = new System.Drawing.Point(9, 166);
+            this.buttonInstallURLHandler.Name = "buttonInstallURLHandler";
+            this.buttonInstallURLHandler.Size = new System.Drawing.Size(119, 22);
+            this.buttonInstallURLHandler.TabIndex = 3;
+            this.buttonInstallURLHandler.Text = "Enable 1-Click Install";
+            this.buttonInstallURLHandler.UseVisualStyleBackColor = true;
+            this.buttonInstallURLHandler.Click += new System.EventHandler(this.installURLHandlerButton_Click);
+            // 
+            // groupBoxUpdates
+            // 
+            this.groupBoxUpdates.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxUpdates.Controls.Add(this.buttonCheckForUpdates);
+            this.groupBoxUpdates.Controls.Add(this.label4);
+            this.groupBoxUpdates.Controls.Add(this.checkUpdateModsStartup);
+            this.groupBoxUpdates.Controls.Add(this.numericUpdateFrequency);
+            this.groupBoxUpdates.Controls.Add(this.comboUpdateFrequency);
+            this.groupBoxUpdates.Controls.Add(this.checkUpdateStartup);
+            this.groupBoxUpdates.Location = new System.Drawing.Point(9, 6);
+            this.groupBoxUpdates.Name = "groupBoxUpdates";
+            this.groupBoxUpdates.Size = new System.Drawing.Size(437, 90);
+            this.groupBoxUpdates.TabIndex = 1;
+            this.groupBoxUpdates.TabStop = false;
+            this.groupBoxUpdates.Text = "Updates";
+            // 
+            // buttonCheckForUpdates
+            // 
+            this.buttonCheckForUpdates.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonCheckForUpdates.Location = new System.Drawing.Point(259, 55);
+            this.buttonCheckForUpdates.Name = "buttonCheckForUpdates";
+            this.buttonCheckForUpdates.Size = new System.Drawing.Size(75, 23);
+            this.buttonCheckForUpdates.TabIndex = 8;
+            this.buttonCheckForUpdates.Text = "Check Now";
+            this.buttonCheckForUpdates.UseVisualStyleBackColor = true;
+            this.buttonCheckForUpdates.Click += new System.EventHandler(this.buttonCheckForUpdates_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Frequency:";
+            // 
+            // checkUpdateModsStartup
+            // 
+            this.checkUpdateModsStartup.AutoSize = true;
+            this.checkUpdateModsStartup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.checkUpdateModsStartup.Location = new System.Drawing.Point(133, 19);
+            this.checkUpdateModsStartup.Name = "checkUpdateModsStartup";
+            this.checkUpdateModsStartup.Size = new System.Drawing.Size(141, 18);
+            this.checkUpdateModsStartup.TabIndex = 5;
+            this.checkUpdateModsStartup.Text = "Check mods on startup";
+            this.checkUpdateModsStartup.UseVisualStyleBackColor = true;
+            // 
+            // numericUpdateFrequency
+            // 
+            this.numericUpdateFrequency.Location = new System.Drawing.Point(133, 57);
+            this.numericUpdateFrequency.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpdateFrequency.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpdateFrequency.Name = "numericUpdateFrequency";
+            this.numericUpdateFrequency.Size = new System.Drawing.Size(120, 20);
+            this.numericUpdateFrequency.TabIndex = 7;
+            this.numericUpdateFrequency.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // comboUpdateFrequency
+            // 
+            this.comboUpdateFrequency.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboUpdateFrequency.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboUpdateFrequency.FormattingEnabled = true;
+            this.comboUpdateFrequency.Items.AddRange(new object[] {
+            "Always",
+            "Days",
+            "Hours",
+            "Weeks"});
+            this.comboUpdateFrequency.Location = new System.Drawing.Point(6, 56);
+            this.comboUpdateFrequency.Name = "comboUpdateFrequency";
+            this.comboUpdateFrequency.Size = new System.Drawing.Size(121, 21);
+            this.comboUpdateFrequency.TabIndex = 6;
+            this.comboUpdateFrequency.SelectedIndexChanged += new System.EventHandler(this.comboUpdateFrequency_SelectedIndexChanged);
+            // 
+            // checkUpdateStartup
+            // 
+            this.checkUpdateStartup.AutoSize = true;
+            this.checkUpdateStartup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.checkUpdateStartup.Location = new System.Drawing.Point(6, 19);
+            this.checkUpdateStartup.Name = "checkUpdateStartup";
+            this.checkUpdateStartup.Size = new System.Drawing.Size(113, 18);
+            this.checkUpdateStartup.TabIndex = 4;
+            this.checkUpdateStartup.Text = "Check on startup";
+            this.checkUpdateStartup.UseVisualStyleBackColor = true;
+            // 
             // modContextMenu
             // 
             this.modContextMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -2361,12 +2464,22 @@
             this.generateManifestToolStripMenuItem.Text = "Generate manifest";
             this.generateManifestToolStripMenuItem.Click += new System.EventHandler(this.generateManifestToolStripMenuItem_Click);
             // 
-            // MainForm
+            // listBoxPatches
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.listBoxPatches.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxPatches.FormattingEnabled = true;
+            this.listBoxPatches.Location = new System.Drawing.Point(3, 3);
+            this.listBoxPatches.Name = "listBoxPatches";
+            this.listBoxPatches.Size = new System.Drawing.Size(432, 383);
+            this.listBoxPatches.TabIndex = 0;
+			this.listBoxPatches.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.listBoxPatches_ItemCheck);
+			// 
+			// MainForm
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(458, 503);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlMain);
             this.Controls.Add(this.installButton);
             this.Controls.Add(this.saveAndPlayButton);
             this.Controls.Add(this.saveButton);
@@ -2376,7 +2489,7 @@
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "SADX Mod Manager";
+            this.Text = "SADX Mod Manager Classic";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
@@ -2385,10 +2498,12 @@
             groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verticalResolution)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.horizontalResolution)).EndInit();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlMain.ResumeLayout(false);
             this.tabPageMods.ResumeLayout(false);
             this.tabPageMods.PerformLayout();
             this.tabPageCodes.ResumeLayout(false);
+            this.tabPageGameConfig.ResumeLayout(false);
+            this.tabControlGameConfig.ResumeLayout(false);
             this.tabPageGraphics.ResumeLayout(false);
             this.groupBox_WindowMode.ResumeLayout(false);
             this.groupBox_WindowMode.PerformLayout();
@@ -2399,8 +2514,11 @@
             this.groupBox_Display.ResumeLayout(false);
             this.groupBox_Display.PerformLayout();
             this.tabPageInput.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupMouseMode.ResumeLayout(false);
             this.groupMouseMode.PerformLayout();
+            this.tabPageController.ResumeLayout(false);
             this.groupBoxController.ResumeLayout(false);
             this.groupBoxController.PerformLayout();
             this.tabPageSound.ResumeLayout(false);
@@ -2411,12 +2529,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBarMusicVol)).EndInit();
             this.groupBox_SoundConfig.ResumeLayout(false);
             this.groupBox_SoundConfig.PerformLayout();
+            this.tabPagePatches.ResumeLayout(false);
             this.tabPageOptions.ResumeLayout(false);
-            this.tabPageOptions.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).EndInit();
             this.tabPageDebug.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
@@ -2430,6 +2544,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTestSpawnZ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTestSpawnY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownTestSpawnX)).EndInit();
+            this.tabPageManagerConfig.ResumeLayout(false);
+            this.tabPageManagerConfig.PerformLayout();
+            this.groupBoxProfiles.ResumeLayout(false);
+            this.groupBoxUpdates.ResumeLayout(false);
+            this.groupBoxUpdates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpdateFrequency)).EndInit();
             this.modContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2448,7 +2568,7 @@
         private System.Windows.Forms.NumericUpDown verticalResolution;
         private System.Windows.Forms.Label modDescription;
 		private System.Windows.Forms.Button buttonRefreshModList;
-		private System.Windows.Forms.TabControl tabControl1;
+		private System.Windows.Forms.TabControl tabControlMain;
 		private System.Windows.Forms.TabPage tabPageMods;
 		private System.Windows.Forms.TabPage tabPageCodes;
 		private System.Windows.Forms.CheckedListBox codesCheckedListBox;
@@ -2482,7 +2602,7 @@
 		private System.Windows.Forms.TabPage tabPageOptions;
 		private System.Windows.Forms.CheckBox pauseWhenInactiveCheckBox;
 		private System.Windows.Forms.CheckBox disableCDCheckCheckBox;
-		private System.Windows.Forms.GroupBox groupBox4;
+		private System.Windows.Forms.GroupBox groupBoxUpdates;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.CheckBox checkUpdateModsStartup;
 		private System.Windows.Forms.NumericUpDown numericUpdateFrequency;
@@ -2498,7 +2618,7 @@
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.ComboBox comboFmvFill;
 		private System.Windows.Forms.ComboBox comboBackgroundFill;
-		private System.Windows.Forms.Button installURLHandlerButton;
+		private System.Windows.Forms.Button buttonInstallURLHandler;
 		private System.Windows.Forms.Button modBottomButton;
 		private System.Windows.Forms.Button modTopButton;
 		private System.Windows.Forms.Button configureModButton;
@@ -2559,11 +2679,11 @@
         private System.Windows.Forms.ComboBox comboBoxTestSpawnTime;
 		private System.Windows.Forms.Button buttonUpdateD3D8to9;
 		private System.Windows.Forms.Label labelTestSpawnWarning;
-		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.GroupBox groupBoxProfiles;
 		private System.Windows.Forms.ComboBox profileNameBox;
 		private System.Windows.Forms.Button buttonSaveProfile;
 		private System.Windows.Forms.Button buttonLoadProfile;
-		private System.Windows.Forms.TabPage tabPageInput;
+		private System.Windows.Forms.TabPage tabPageController;
 		private System.Windows.Forms.TextBox controllerConfigName;
 		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 		private System.Windows.Forms.Button controllerConfigRemove;
@@ -2589,5 +2709,14 @@
 		private System.Windows.Forms.Label labelSEVolText;
 		private System.Windows.Forms.CheckBox checkBassSE;
 		private System.Windows.Forms.CheckBox checkInterpolation;
+		private System.Windows.Forms.TabPage tabPageGameConfig;
+		private System.Windows.Forms.TabControl tabControlGameConfig;
+		private System.Windows.Forms.TabPage tabPageManagerConfig;
+		private System.Windows.Forms.TabPage tabPagePatches;
+		private System.Windows.Forms.TabPage tabPageInput;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.RadioButton radioButton1;
+		private System.Windows.Forms.RadioButton radioButtonDInput;
+		private System.Windows.Forms.CheckedListBox listBoxPatches;
 	}
 }
