@@ -18,6 +18,7 @@ using SADXModManager.Forms;
 using SADXModManager.Properties;
 using SADXModManager.Controls;
 using SharpDX.DirectInput;
+using Newtonsoft.Json;
 
 namespace SADXModManager
 {
@@ -1767,6 +1768,7 @@ namespace SADXModManager
 		#region Game settings
 		private void LoadConfigIni()
 		{
+			InitPatches();
 			configFile = File.Exists(sadxIni) ? IniSerializer.Deserialize<GameConfigFile>(sadxIni) : new GameConfigFile();
 			if (configFile.GameConfig == null)
 			{
@@ -2739,6 +2741,51 @@ namespace SADXModManager
 			}
 		}
 
+		#endregion
+
+		#region Patches
+		public class PatchesData
+		{
+			public string Name { get; set; }
+			public string Author { get; set; }
+			public string Category { get; set; }
+			public string Description { get; set; }
+			public bool IsChecked { get; set; }
+			public string InternalName { get; set; }
+		}
+
+		public class PatchesList
+		{
+			public List<PatchesData> Patches { get; set; } = new List<PatchesData>();
+			public static PatchesList Deserialize(string path)
+			{
+				if (File.Exists(path))
+				{
+					JsonSerializer js = new JsonSerializer() { Culture = System.Globalization.CultureInfo.InvariantCulture };
+					using (TextReader tr = File.OpenText(path))
+					using (JsonTextReader jtr = new JsonTextReader(tr))
+						return js.Deserialize<PatchesList>(jtr);
+				}
+
+				return null;
+			}
+		}
+
+		public void InitPatches()
+		{
+			if (File.Exists("mods/Patches.json"))
+			{
+				PatchesList list = PatchesList.Deserialize("mods/Patches.json");
+				foreach (PatchesData patchesData in list.Patches)
+				{
+					listBoxPatches.Items.Add(patchesData.Name);
+				}
+			}
+		}
+
+		private void listBoxPatches_ItemCheck(object sender, ItemCheckEventArgs e)
+		{
+		}
 		#endregion
 	}
 }
