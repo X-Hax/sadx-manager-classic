@@ -32,7 +32,7 @@ namespace SADXModManager
 		readonly List<ControllerConfigInternal> controllerConfig = new List<ControllerConfigInternal>();
 		private const string sadxIni = "sonicDX.ini";
 		private const string d3d8to9InstalledDLLName = "d3d8.dll";
-		private const string d3d8to9StoredDLLName = "d3d8m.dll";
+		private const string d3d8to9StoredDLLName = "SAManager/extlib/D3D8M/d3d8m.dll";
 		private bool checkedForUpdates;
 
 		const string updatePath = "mods/.updates";
