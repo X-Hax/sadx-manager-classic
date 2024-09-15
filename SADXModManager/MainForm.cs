@@ -205,11 +205,11 @@ namespace SADXModManager
 				}
 				else
 				{
-				// Windows 7 or earlier.
-				// TODO: Make sure this font exists.
-				// NOTE: U+2912 and U+2913 are missing in Bold, so use Regular.
-				boldFont = new Font("Cambria", this.Font.Size * 1.25f, FontStyle.Regular);
-			}
+					// Windows 7 or earlier.
+					// TODO: Make sure this font exists.
+					// NOTE: U+2912 and U+2913 are missing in Bold, so use Regular.
+					boldFont = new Font("Cambria", this.Font.Size * 1.25f, FontStyle.Regular);
+				}
 			}
 			else
 			{
