@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SADXModManager", "SADXModManager\SADXModManager.csproj", "{427C6108-1DC7-4CAC-9C6A-43D710FCC42C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModManagerCommon", "mod-loader-common\ModManagerCommon\ModManagerCommon.csproj", "{4A480502-79B5-4E1E-8D67-16C514BB13CD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,10 +15,6 @@ Global
 		{427C6108-1DC7-4CAC-9C6A-43D710FCC42C}.Debug|x86.Build.0 = Debug|x86
 		{427C6108-1DC7-4CAC-9C6A-43D710FCC42C}.Release|x86.ActiveCfg = Release|x86
 		{427C6108-1DC7-4CAC-9C6A-43D710FCC42C}.Release|x86.Build.0 = Release|x86
-		{4A480502-79B5-4E1E-8D67-16C514BB13CD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4A480502-79B5-4E1E-8D67-16C514BB13CD}.Debug|x86.Build.0 = Debug|Any CPU
-		{4A480502-79B5-4E1E-8D67-16C514BB13CD}.Release|x86.ActiveCfg = Release|Any CPU
-		{4A480502-79B5-4E1E-8D67-16C514BB13CD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
