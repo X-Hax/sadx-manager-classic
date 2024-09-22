@@ -1,0 +1,3 @@
+[submodule "mod-manager-common"]
+	path = mod-manager-common
+	url = https://github.com/X-Hax/mod-manager-common
